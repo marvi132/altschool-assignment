@@ -1,0 +1,11 @@
+product_id,product_name,category,price,has_been_ordered
+1,Laptop,Electronics,350000,TRUE
+2,Smartphone,Electronics,200000,TRUE
+3,Headphones,Electronics,20000,TRUE
+4,Office Chair,Furniture,45000,TRUE
+5,Table,Furniture,60000,TRUE
+6,Notebook,Stationery,1500,TRUE
+7,Pen,Stationery,300,TRUE
+8,Pencil,Stationery,200,TRUE
+9,Water Bottle,Home Essentials,2500,TRUE
+10,Backpack,Accessories,15000,TRUE
