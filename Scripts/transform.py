@@ -1,4 +1,4 @@
-import pandas as pd
+import csv
 import os
 
 # Get the directory of the current script
@@ -7,16 +7,28 @@ project_root = os.path.dirname(script_dir)
 
 # Load the CSV file using absolute path
 input_path = os.path.join(project_root, 'Results', 'top_customers.csv')
-df = pd.read_csv(input_path)
 
-# Convert customer names to title case
-df['customer_name'] = df['customer_name'].str.title()
-
-# Format amount as Nigerian Naira (₦) with comma separators and two decimal places
-df['total_spent'] = df['total_spent'].apply(lambda x: f"₦{x:,.2f}")
+# Read and transform the data
+transformed_data = []
+with open(input_path, 'r', encoding='utf-8') as file:
+    reader = csv.DictReader(file)
+    fieldnames = reader.fieldnames or []
+    
+    for row in reader:
+        # Convert customer names to title case
+        row['customer_name'] = row['customer_name'].title()
+        
+        # Format amount as Nigerian Naira (₦) with comma separators and two decimal places
+        total_spent = float(row['total_spent'])
+        row['total_spent'] = f"₦{total_spent:,.2f}"
+        
+        transformed_data.append(row)
 
 # Save the cleaned data to a new CSV file
 output_path = os.path.join(project_root, 'Results', 'top_customers_cleaned.csv')
-df.to_csv(output_path, index=False)
+with open(output_path, 'w', newline='', encoding='utf-8') as file:
+    writer = csv.DictWriter(file, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(transformed_data)
 
 print(f"Cleaned data saved to: {output_path}")
