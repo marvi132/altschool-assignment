@@ -1,8 +1,8 @@
 import csv
 
 # Input and output file paths
-input_file = "retail-etl-assignment/results/top_customers.csv"
-output_file = "retail-etl-assignment/results/top_customers_cleaned.csv"
+input_file = "results/top_customers.csv"
+output_file = "results/top_customers_cleaned.csv"
 
 # Function to format amount as ₦ currency
 def format_currency(amount):
@@ -29,7 +29,7 @@ with open(input_file, mode='r', encoding='utf-8') as infile, \
 print(f"Transformed data saved to {output_file}")
 
 # Input file path
-input_file = "retail-etl-assignment/results/top_customers_cleaned.csv"
+input_file = "results/top_customers_cleaned.csv"
 
 # Read and print each row
 with open(input_file, mode='r', encoding='utf-8') as infile:
