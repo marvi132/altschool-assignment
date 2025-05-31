@@ -35,4 +35,4 @@ input_file = "results/top_customers_cleaned.csv"
 with open(input_file, mode='r', encoding='utf-8') as infile:
     reader = csv.DictReader(infile)
     for row in reader:
-        print(f"Loading: {row['name']} - {row['total_spent']}")
+        print(f"Loading: {row['name']} - {row['total_amount_spent']}")
