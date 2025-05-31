@@ -20,7 +20,7 @@ with open(input_csv_file_path, mode='r', newline='', encoding='utf-8') as inputf
             row['name'] = row['name'].title()
 
             #Format amount into ₦ currency
-            row['total_spent'] = f'₦{float(row["total_spent"]):,.2f}'
+            row['total_spent'] = f'#{float(row["total_spent"]):,.2f}'
 
             writer.writerow(row)
             print(row)
