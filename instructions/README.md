@@ -9,12 +9,14 @@ This assignment simulates a simple **ETL (Extract, Transform, Load)** process us
 ## 📦 Instructions
 
 ### 1. Clone this repository
+
 ```bash
 git clone https://github.com/your-org/retail-data-engineering.git
 cd retail-data-engineering
 ```
 
 ### 2. Create your branch
+
 ```bash
 git checkout -b yourname-surname
 ```
@@ -24,6 +26,7 @@ git checkout -b yourname-surname
 ## 📂 Assignment Tasks
 
 ### ✅ Task 1 – Extract (SQL)
+
 - Open the SQL file at `sql/retail_data.sql` in [DB Browser for SQLite](https://sqlitebrowser.org/)
 - Run the script to create and populate the database
 - Write SQL queries to extract:
@@ -38,6 +41,7 @@ git checkout -b yourname-surname
 ---
 
 ### ✅ Task 2 – Transform (Python)
+
 - Open `scripts/transform.py`
 - Write a Python script that:
   - Loads `top_customers.csv`
@@ -48,6 +52,7 @@ git checkout -b yourname-surname
 ---
 
 ### ✅ Task 3 – Load (Simulated)
+
 - In the same script or new one (`load.py`), read `top_customers_cleaned.csv`
 - Print each row like:
   ```
@@ -57,11 +62,13 @@ git checkout -b yourname-surname
 ---
 
 ## 📤 Submit your work
+
 ```bash
 git add .
 git commit -m "Finished data engineering assignment"
 git push origin yourname-surname
 ```
+
 Then open a **Pull Request** on GitHub.
 
 ---

@@ -1,3 +1,15 @@
+--first 5 customers by total amount spent
+SELECT c.name as customer_name,SUM(price * quantity) AS total_amount_spent
+FROM customers c
+JOIN orders o ON o.customer_id = c.id
+JOIN order_items oi ON oi.order_id = o.id
+JOIN products p ON p.id = oi.product_id
+GROUP BY c.name
+ORDER BY total_amount_spent DESC
+LIMIT 5;
+
+
+
 -- Create tables
 
 CREATE TABLE customers (id INTEGER PRIMARY KEY, name TEXT);
