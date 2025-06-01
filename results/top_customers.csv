@@ -1,0 +1,8 @@
+select customers.id as customer_id, customers.name as customer_name, sum(order_items.quantity*price) as total_amount 
+from customers
+inner join orders on customers.id=orders.customer_id
+inner join order_items on orders.id=order_items.order_id
+inner join products on order_items.product_id=products.id
+group by customers.name
+order by total_amount desc
+limit 5;

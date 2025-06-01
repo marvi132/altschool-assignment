@@ -109,3 +109,35 @@ INSERT INTO order_items (id, order_id, product_id, quantity) VALUES
 (41, 20, 6, 1),
 (42, 21, 3, 5),
 (43, 21, 6, 4);
+
+--- Top 5 customers by total amount spent
+select customers.id as customer_id, customers.name as customer_name, sum(order_items.quantity*price) as total_amount 
+from customers
+inner join orders on customers.id=orders.customer_id
+inner join order_items on orders.id=order_items.order_id
+inner join products on order_items.product_id=products.id
+group by customers.name
+order by total_amount desc
+limit 5;
+
+
+-- Total orders by each customers
+SELECT c.name as customer_name,
+    Count(o.id) as number_of_orders
+from customers c
+join orders o on c.id = o.customer_id
+group by c.id, c.name
+order by number_of_orders DESC;
+
+-- Products that have never been ordered
+Select  p.id,
+     p.name,
+    p.category,
+    p.price
+from products p
+join order_items oi on p.id = oi.product_id
+where oi.id is null;
+
+		select*
+from customers;
+

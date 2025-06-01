@@ -1,0 +1,8 @@
+-- Total orders by each customers
+SELECT c.name as customer_name,
+    Count(o.id) as number_of_orders
+from customers c
+join orders o on c.id = o.customer_id
+group by c.id, c.name
+order by number_of_orders DESC;
+
