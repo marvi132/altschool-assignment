@@ -1,0 +1,11 @@
+id,name,category,price,id,order_id,product_id,quantity
+1,Laptop,Electronics,350000.0,,,,
+2,Smartphone,Electronics,200000.0,,,,
+3,Headphones,Electronics,20000.0,,,,
+4,Office Chair,Furniture,45000.0,,,,
+5,Table,Furniture,60000.0,,,,
+6,Notebook,Stationery,1500.0,,,,
+7,Pen,Stationery,300.0,,,,
+8,Pencil,Stationery,200.0,,,,
+9,Water Bottle,Home Essentials,2500.0,,,,
+10,Backpack,Accessories,15000.0,,,,
