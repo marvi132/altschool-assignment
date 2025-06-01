@@ -1,0 +1,8 @@
+-- product that has never been ordered
+Select  p.id,
+     p.name,
+    p.category,
+    p.price
+from products p
+join order_items oi on p.id = oi.product_id
+where oi.id is null;

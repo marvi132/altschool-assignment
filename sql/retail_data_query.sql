@@ -110,6 +110,7 @@ INSERT INTO order_items (id, order_id, product_id, quantity) VALUES
 (42, 21, 3, 5),
 (43, 21, 6, 4);
 
+
 --- Top 5 customers by total amount spent
 select customers.id as customer_id, customers.name as customer_name, sum(order_items.quantity*price) as total_amount 
 from customers
