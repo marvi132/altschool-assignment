@@ -109,3 +109,4 @@ INSERT INTO order_items (id, order_id, product_id, quantity) VALUES
 (41, 20, 6, 1),
 (42, 21, 3, 5),
 (43, 21, 6, 4);
+
